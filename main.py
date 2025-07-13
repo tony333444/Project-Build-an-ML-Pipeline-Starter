@@ -64,7 +64,7 @@ def go(config: DictConfig):
             "max_price": config["etl"]["max_price"],
         },
     )
-        if "data_check" in steps:
+        if "data_check" in active_steps:
          _ = mlflow.run(
         os.path.join(hydra.utils.get_original_cwd(), "src", "data_check"),
         "main",
