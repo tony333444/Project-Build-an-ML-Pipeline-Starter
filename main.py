@@ -51,10 +51,10 @@ def go(config: DictConfig):
             )
 
         if "basic_cleaning" in active_steps:
-         _ = mlflow.run(
-        "./src/basic_cleaning",
+         mlflow.run(
+            "https://github.com/tony333444/Project-Build-an-ML-Pipeline-Starter.git#src/basic_cleaning",  
         "main",
-        env_manager="local",  # or "conda" if using conda.yml
+        env_manager="conda",  
         parameters={
             "input_artifact": "sample.csv:latest",
             "output_artifact": "clean_sample.csv",
