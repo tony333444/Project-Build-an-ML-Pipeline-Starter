@@ -93,7 +93,7 @@ def go(config: DictConfig):
         if "train_random_forest" in active_steps:
             rf_config = os.path.abspath("rf_config.json")
         with open(rf_config, "w+") as fp:
-        json.dump(dict(config["modeling"]["random_forest"].items()), fp)
+         json.dump(dict(config["modeling"]["random_forest"].items()), fp)
 
     _ = mlflow.run(
         os.path.join(hydra.utils.get_original_cwd(), "src", "train_random_forest"),
@@ -109,7 +109,7 @@ def go(config: DictConfig):
         }
     )
 
-        if "test_regression_model" in active_steps:
+    if "test_regression_model" in active_steps:
 
             ##################
             # Implement here #
