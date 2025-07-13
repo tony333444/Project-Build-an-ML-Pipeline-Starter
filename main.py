@@ -51,11 +51,19 @@ def go(config: DictConfig):
             )
 
         if "basic_cleaning" in active_steps:
-            ##################
-            # Implement here #
-            ##################
-            pass
-
+         _ = mlflow.run(
+        "./src/basic_cleaning",
+        "main",
+        env_manager="local",  # or "conda" if using conda.yml
+        parameters={
+            "input_artifact": "sample.csv:latest",
+            "output_artifact": "clean_sample.csv",
+            "output_type": "cleaned_data",
+            "output_description": "Data with outliers and invalid geos removed",
+            "min_price": config["etl"]["min_price"],
+            "max_price": config["etl"]["max_price"],
+        },
+    )
         if "data_check" in active_steps:
             ##################
             # Implement here #
@@ -91,7 +99,6 @@ def go(config: DictConfig):
             ##################
 
             pass
-
 
 if __name__ == "__main__":
     go()
