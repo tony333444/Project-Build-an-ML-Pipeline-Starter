@@ -4,27 +4,15 @@ conda_env: conda.yml
 entry_points:
   main:
     parameters:
-      input_artifact:
-        type: str
-        description: Initial artifact to be cleaned
-      output_artifact:
-        type: str
-        description: Output artifact for cleaned data
-      output_type:
-        type: str
-        description: Type of the output dataset
-      output_description:
-        type: str
-        description: Description of the output dataset
-      min_price:
-        type: float
-        description: Minimum house price to be considered
-      max_price:
-        type: float
-        description: Maximum house price to be considered
+      input_artifact: {type: str}
+      output_artifact: {type: str}
+      output_type: {type: str}
+      output_description: {type: str}
+      min_price: {type: float}
+      max_price: {type: float}
 
-    command: >-
-      python run.py
+    command: >
+      python run.py 
         --input_artifact {input_artifact}
         --output_artifact {output_artifact}
         --output_type {output_type}
