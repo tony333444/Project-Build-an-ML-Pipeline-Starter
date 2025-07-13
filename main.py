@@ -94,7 +94,7 @@ def go(config: DictConfig):
             rf_config = os.path.abspath("rf_config.json")
             with open(rf_config, "w+") as fp:
                 json.dump(dict(config["modeling"]["random_forest"].items()), fp)
-
+                
             _ = mlflow.run(
                 os.path.join(hydra.utils.get_original_cwd(), "src", "train_random_forest"),
                 "main",
