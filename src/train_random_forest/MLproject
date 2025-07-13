@@ -1,4 +1,4 @@
-name: download_file
+name: train_random_forest
 conda_env: conda.yml
 
 entry_points:
@@ -10,30 +10,29 @@ entry_points:
         type: string
 
       val_size:
-        description: Size of the validation split. Fraction of the dataset, or number of items
-        type: string
+        description: Size of the validation split
+        type: float
 
       random_seed:
-        description: Seed for the random number generator. Use this for reproducibility
-        type: string
+        description: Seed for reproducibility
+        type: int
         default: 42
 
       stratify_by:
-        description: Column to use for stratification (if any)
+        description: Column to use for stratification
         type: string
-        default: 'none'
+        default: none
 
       rf_config:
-        description: Random forest configuration. A path to a JSON file with the configuration that will
-                     be passed to the scikit-learn constructor for RandomForestRegressor.
+        description: Path to JSON config for Random Forest
         type: string
 
       max_tfidf_features:
-        description: Maximum number of words to consider for the TFIDF
-        type: string
+        description: Max TFIDF words
+        type: int
 
       output_artifact:
-        description: Name for the output artifact
+        description: Name for output model artifact
         type: string
 
     command: >-
