@@ -6,6 +6,12 @@ to be retrained with the same cadence, necessitating an end-to-end pipeline that
 
 In this project you will build such a pipeline.
 
+## Links for submissions
+
+- W&B Project: [https://wandb.ai/acal172-western-governors-university/nyc_airbnb](https://wandb.ai/acal172-western-governors-university/nyc_airbnb)
+- GitHub Repository: [https://github.com/tony333444/Project-Build-an-ML-Pipeline-Starter](https://github.com/tony333444/Project-Build-an-ML-Pipeline-Starter)
+
+
 ## Table of contents
 
 - [Preliminary steps](#preliminary-steps)
@@ -38,7 +44,7 @@ and click on `Fork` in the upper right corner. This will create a fork in your G
 repository that is under your control. Now clone the repository locally so you can start working on it:
 
 ```
-git clone https://github.com/[your github username]/Project-Build-an-ML-Pipeline-Starter.git
+git clone https://github.com/tony333444/Project-Build-an-ML-Pipeline-Starter.git
 ```
 
 and go into the repository:
@@ -64,8 +70,8 @@ Let's make sure we are logged in to Weights & Biases. Get your API key from W&B 
 then paste your key into this command:
 
 ```bash
-> wandb login [your API key]
-```
+> wandb login [446cbd9a258e180e4496aaa700643ea263c6fe2a]
+``` 
 
 You should see a message similar to:
 ```
